@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            // $(".list").append("안녕하세요")
+            // $(".list").prepend("hi")
+            // $("btn1").click(function(){
+            //     $(".list").append( $(".list li").eq(0))
+            //     $(".list li").eq(0).appendTo(".list")
+            // })
+
+            // $(".btn2").click(function(){
+            //     $(".list").prepend( $(".list li").last())
+            //     $(".list li").prependTo( $(".list").last())
+            // })
+            setInterval(function(){
+                $(".list").append( $(".list li").eq(0))
+            },1000)
+        })//jq
+    </script>
+    <style type="text/css">
+        li{list-style: none;}
+    a{text-decoration: none; color: inherit;}
+    </style>
+</head>
+<body>
+    <button class="btn1">버튼append</button>
+    <button class="btn2">버튼prepend</button>
+    <ul class="list">
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+        <li>list-5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .job{
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            border: 10px solid #ddd;
+            position: relative;
+        }
+        .job::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            top: -10px;
+            left: -10px;
+            /* transition: all 0.3s ease-in-out; */
+            animation: move 5s ;
+            animation-fill-mode: forwards;  /* 마지막 단계의 애니메이션에서 멈추게 하려면 필모드를  포워드로 걸어야함 */
+        }
+        .job:hover::before{
+            /* width: 420px; */
+        }
+        @keyframes move{
+            0%{
+                width: 10px;
+            }
+            100%{
+                width: 420px;
+            }
+        }
+
+        .job::after{
+            content: "";
+            display: block;
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            transition: all 0.3 ease-in-out;
+            animation: move 5s;
+            animation-fill-mode: forwards;
+        }
+        .job:hover::after{
+            /* width: 420px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="job"></div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .box{
+            width: 100px;
+            height: 80px;
+            background-color: black;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .square{
+            text-align: center;
+            text-decoration: none;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            margin: 100px;
+        }
+        .square span{
+            position: absolute;
+            text-indent: -9999px;
+            background-color: coral;
+        }
+        .square span.line1{
+            width: 5px;
+            height: 100%; 
+            left: 0px;
+            bottom: 0px;
+            animation: line1 5s infinite ;
+        }
+        .square span.line2{
+            width: 100%; 
+            height: 5px;
+            left: 0px;
+            top: 0px;
+            animation: line2 5s infinite ;
+        }
+        .square span.line3{
+            width: 5px;
+            height: 100%; 
+            top: 0px;
+            right: 0px;
+            animation: line3 5s infinite ;
+        }
+        .square span.line4{
+            width: 100%; 
+            height: 5px;
+            bottom: 0px;
+            right: 0px;
+            animation: line4 5s infinite ;
+        }
+        @keyframes line1{
+            0%{height: 0;}
+            25%,100%{height:100%; }}
+        @-webkit-keyframes line1{
+            0%{height: 0;}
+            25%,100%{height: 100%; }
+        }
+        @-moz-keyframes line1{
+            0%{height: 0;}
+            25%,100%{height: 100%; }
+        }
+
+        @keyframes line2{
+            0%,25{width: 0;}
+            50%,100%{width:100%; }
+        }
+        @-webkit-keyframes line2{
+            0%,25{width: 0;}
+            50%,100%{width: 100%; }
+        }
+        @-moz-keyframes line2{
+            0%,25{width: 0;}
+            50%,100%{width:100%; }
+        }
+        @keyframes line3{
+            0%,50%{height: 0;}
+            75%,100%{height: 100%; }
+        }
+        @-webkit-keyframes line3{
+            0%,50%{height: 0;}
+            75%,100%{height: 100%; }
+        }
+        @-moz-keyframes line3{
+            0%,50%{height: 0;}
+            75%,100%{height: 100%; }
+        }
+        @keyframes line4{
+            0%,75%{width: 0;}
+            100%{width: 100%; }
+        }
+        @-webkit-keyframes line4{
+            0%,75%{width: 0;}
+            100%{width: 100%; }
+        }
+        @-moz-keyframes line4{
+            0%,75%{width: 0;}
+            100%{width:100%; }
+        }
+        .img_show{
+            width: 1800px;
+            height: 1125px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .img_show img{
+            position: absolute;
+            width: 100%;
+            height: 1125px;
+        }
+        .img_a{}
+        .img_b{
+            display: none;
+        }
+        .img_show:hover .img_b{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> 
+    <a href="#" class="square">
+        button
+        <span class="line1">1</span>
+        <span class="line2">2</span>
+        <span class="line3">3</span>
+        <span class="line4">4</span>
+    </a>
+    </div><!-- box -->
+    <div class="img_show">
+        <img src="imgs/bg1.jpg" alt="img1" class="img_a">
+        <img src="imgs/bg3.jpg" alt="img3" class="img_b">
+    </div>
+</body>
+</html>

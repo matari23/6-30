@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            var col = $("h1").css("color","#f00")
+            console.log("col")
+            
+            $("h1").click(function(){
+                // $("h1").removeClass("item")
+                // $(this).addClass("item")
+                $(this).toggleClass("item")
+            })
+            // var src = $("img").attr("src")
+            // alert(src)
+            $("img").each(function(i){
+                var bg = $(this).attr("bg")
+                console.log(bg)
+                var w = $(this).attr("width")
+                // $(this).attr("width" , (i + 10) * 100)
+                $(this).removeAttr(width)
+            })
+
+
+        })//jq
+    </script>
+    <style type="text/css">
+        h1{
+            color: green;
+            cursor: pointer;
+        }
+        h1.item{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>header-0</h1>
+    <h1>header-1</h1>
+    <h1>header-2</h1>
+
+    <img src="imgs/bg4.jpg" alt="bg4" title="bg4" bg="#f00" class="kimh1" width="200">
+    <img src="imgs/bg5.jpg" alt="bg5" title="bg5" bg="#f00" width="200">
+    <img src="imgs/bg3.jpg" alt="bg3" title="bg3" bg="#f0f" width="200">
+</body>
+</html>
